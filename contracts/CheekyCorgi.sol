@@ -126,9 +126,34 @@ contract CheekyCorgi is
     }
   }
 
+  // -------------------- EVENTS --------------------
+
+  function transferFrom(
+    address from,
+    address to,
+    uint256 tokenId
+  ) public override {
+    super.transferFrom(from, to, tokenId);
+  }
+
+  function safeTransferFrom(
+    address from,
+    address to,
+    uint256 tokenId,
+    bytes memory _data
+  ) public override {
+    super.safeTransferFrom(from, to, tokenId, _data);
+  }
+
   // -------------------- CALCULATION FUNCTIONS --------------------
   function getPrice(uint256 _quantity) public pure returns (uint256) {
     return _quantity * LAUNCH_PRICE;
+  }
+
+  // -------------------- ADMIN FUNCTIONS --------------------
+  function withdrawToTreasury() public onlyTreasury {
+    uint256 withdrawAmount = address(this).balance;
+    TREASURY.call{ value: withdrawAmount }("");
   }
 
   // -------------------- MODIFIERS --------------------

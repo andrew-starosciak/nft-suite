@@ -13,9 +13,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     args: ["CheekyCorgi", "CC", "", adminAddress, treasuryAddress, owner],
   });
 
-  const [treasury, tester] = await hre.ethers.getSigners();
+  // const [treasury, tester] = await hre.ethers.getSigners();
 
-  console.log(treasury, tester);
   console.log("CHAIN ID", chainId);
   console.log(deployer, adminAddress, treasuryAddress, owner);
   await hre.ethers.getContract("CheekyCorgi", deployer);
