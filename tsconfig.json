@@ -5,8 +5,18 @@
     "strict": true,
     "esModuleInterop": true,
     "outDir": "dist",
-    "declaration": true
+    "declaration": false,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "lib": ["es2018"]
   },
-  "include": ["./scripts", "./test", "./typechain", "./deploy"],
+  "include": [
+    "./scripts",
+    "./test",
+    "./typechain",
+    "./deploy",
+    "scripts/**/*.ts"
+  ],
   "files": ["./hardhat.config.ts"]
 }

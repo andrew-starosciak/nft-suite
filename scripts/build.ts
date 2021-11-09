@@ -1,6 +1,6 @@
 // import * as fs from "fs";
 // import { createCanvas, loadImage } from "canvas";
-import { Builder } from "./interfaces/builder.interface";
+import { Builder } from "./interfaces/index";
 
 class MasterBuilder implements Builder<MasterBuilder> {
   width = 2000;

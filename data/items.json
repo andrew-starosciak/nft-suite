@@ -1,0 +1,32 @@
+{
+  "background": {
+    "items": [
+      "light grey.png"
+    ],
+    "chance": []
+  },
+  "body": {
+    "items": [
+      "yellow.png"
+    ],
+    "chance": []
+  },
+  "face": {
+    "items": [
+      "star sunglasses.png"
+    ],
+    "chance": []
+  },
+  "hat": {
+    "items": [
+      "white cap.png"
+    ],
+    "chance": []
+  },
+  "shirt": {
+    "items": [
+      "Pink hoodie.png"
+    ],
+    "chance": []
+  }
+}

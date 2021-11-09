@@ -6,6 +6,7 @@
   "scripts": {
     "ts": "ts-node",
     "serve-local": "npx hardhat node",
+    "prepare-items": "ts-node scripts/prepare.ts",
     "balances-local": "npx hardhat balances --n http://localhost:8545",
     "run": "hardhat run deploy/deploy.ts --network localhost "
   },
